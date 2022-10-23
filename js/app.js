@@ -3804,21 +3804,19 @@
     const servicesStandart = document.querySelector(".services__standart");
     const servicesSlider = document.querySelector(".services__slider");
     window.addEventListener("DOMContentLoaded", (function(e) {
-        if (this.document.body.clientWidth >= 769) {
+        if (this.document.body.clientWidth >= 768) {
             servicesStandart.classList.add("_active");
             servicesSlider.classList.remove("_active");
-            console.log("hello");
-        } else if (this.document.body.clientWidth < 769) {
+        } else if (this.document.body.clientWidth < 768) {
             servicesStandart.classList.remove("_active");
             servicesSlider.classList.add("_active");
-            console.log("bye");
         }
     }));
     window.addEventListener("resize", (function(e) {
-        if (this.document.body.clientWidth >= 769) {
+        if (this.document.body.clientWidth >= 768) {
             servicesStandart.classList.add("_active");
             servicesSlider.classList.remove("_active");
-        } else if (this.document.body.clientWidth < 769) {
+        } else if (this.document.body.clientWidth < 768) {
             servicesStandart.classList.remove("_active");
             servicesSlider.classList.add("_active");
         }
@@ -3826,29 +3824,42 @@
     const playButtonBig = document.querySelector(".play-main-block-image__big");
     const playButtonSmall = document.querySelector(".play-main-block-image__small");
     window.addEventListener("DOMContentLoaded", (function(e) {
-        if (this.document.body.clientWidth >= 769) {
+        if (this.document.body.clientWidth >= 768) {
             playButtonBig.classList.add("_active");
             playButtonSmall.classList.remove("_active");
-        } else if (this.document.body.clientWidth < 769) {
+        } else if (this.document.body.clientWidth < 768) {
             playButtonBig.classList.remove("_active");
             playButtonSmall.classList.add("_active");
         }
     }));
     window.addEventListener("resize", (function(e) {
-        if (this.document.body.clientWidth >= 769) {
+        if (this.document.body.clientWidth >= 768) {
             playButtonBig.classList.add("_active");
             playButtonSmall.classList.remove("_active");
-        } else if (this.document.body.clientWidth < 769) {
+        } else if (this.document.body.clientWidth < 768) {
             playButtonBig.classList.remove("_active");
             playButtonSmall.classList.add("_active");
         }
     }));
     const backgroundOrnament = document.querySelector(".background__ornament");
+    const backgroundOrnamentSource = backgroundOrnament.parentNode.getElementsByTagName("source")[0];
     window.addEventListener("DOMContentLoaded", (function(e) {
-        if (this.document.body.clientWidth >= 769) backgroundOrnament.src = "img/main-block/background/Ornament.png"; else if (this.document.body.clientWidth < 769) backgroundOrnament.src = "img/main-block/background/Ornament-small.png";
+        if (this.document.body.clientWidth >= 768) {
+            backgroundOrnament.src = "img/main-block/background/Ornament.png";
+            if (backgroundOrnamentSource) backgroundOrnamentSource.srcset = "img/main-block/background/Ornament.webp";
+        } else if (this.document.body.clientWidth < 768) {
+            backgroundOrnament.src = "img/main-block/background/Ornament-small.png";
+            if (backgroundOrnamentSource) backgroundOrnamentSource.srcset = "img/main-block/background/Ornament-small.webp";
+        }
     }));
     window.addEventListener("resize", (function(e) {
-        if (this.document.body.clientWidth >= 769) backgroundOrnament.src = "img/main-block/background/Ornament.png"; else if (this.document.body.clientWidth < 769) backgroundOrnament.src = "img/main-block/background/Ornament-small.png";
+        if (this.document.body.clientWidth >= 768) {
+            backgroundOrnament.src = "img/main-block/background/Ornament.png";
+            if (backgroundOrnamentSource) backgroundOrnamentSource.srcset = "img/main-block/background/Ornament.webp";
+        } else if (this.document.body.clientWidth < 768) {
+            backgroundOrnament.src = "img/main-block/background/Ornament-small.png";
+            if (backgroundOrnamentSource) backgroundOrnamentSource.srcset = "img/main-block/background/Ornament-small.webp";
+        }
     }));
     const titleLine = document.querySelector(".top-main-block__line>img");
     window.addEventListener("DOMContentLoaded", (function(e) {
